@@ -1,0 +1,116 @@
+#!/bin/bash
+
+# Set up the passwords
+#
+#
+#
+
+# Notes: for the moment, the password for this game is "password"
+# need to prompt for username, add the "game password" and also the current date.
+# consider longer passwords for more secure functionality
+
+password="password"
+pass0="level0"
+#echo "nxg13"|md5sum|base64
+pass1=$(echo $password|md5sum|cut -d ' ' -f 1|base64|cut -c1-8)
+pass2=$(echo $password|md5sum|cut -d ' ' -f 1|base64|cut -c9-16)
+pass3=$(echo $password|md5sum|cut -d ' ' -f 1|base64|cut -c17-24)
+pass4=$(echo $password|md5sum|cut -d ' ' -f 1|base64|cut -c25-32)
+pass5=$(echo $password|md5sum|cut -d ' ' -f 1|base64|cut -c33-40)
+
+# Set up Level 0
+#
+#
+#
+
+# Notes for level 0: the password for Level 1 is in a file in level 0's home directory
+
+#echo "pass0:"$pass0
+echo $pass1 > /home/level0/README
+chown level0:level0 /home/level0/README
+
+# Set up Level 1
+#
+#
+#
+
+# Notes for level 1: the password for Level 2 is in a hidden file in level 1's home directory
+
+echo $pass2 > /home/level1/.README
+chown level1:level1 /home/level1/.README
+
+# Set up Level 2
+#
+#
+#
+
+# Notes for level 2: Find the right file - it's somwhere in the rest of the file
+# it is the only file that is completely human-readbale
+# notes - need to find a baseline noise file to copy that is
+# much noisier than the file I have.
+# consider making the noise files longer - more data.
+
+# establish the directory, and set its ownership correctly
+
+mkdir /home/level2/inhere
+chown level2:level2 /home/level2/inhere
+
+# figure out which file number is going to be the one that we hide the password in.
+# strip the first digit off of the password and use that 
+
+location=$(echo md5 $pass3 |cut -c1)
+echo md5 $pass3
+decimallocation=$(echo "obase=10; ibase=16; $location" | bc)
+decimallocation=$((decimallocation+1))
+
+i=1
+
+#make 15 files of noise, and 1 file with the password
+
+for i in {1..16}
+do
+	if [ $i = $decimallocation ]; then
+		#This must be the file that we're going to hide the PW in
+		#decide which file to hide the passcode in
+		echo $pass3 > /home/level2/inhere/file$i
+	else
+		# Create a bunch of noise files by copying one line of data from a binary file somwhere on the system
+		#pull one line of something binary and copy it as file{n}
+		tail -n $i /bin/vdir | head -n 1 > /home/level2/inhere/file$i
+	fi
+done
+
+# now set their owners correctly
+chown level2:level2 /home/level2/inhere/*
+
+# Set up Level 3
+#
+#
+#
+
+location=$(echo "nxg13"|md5sum|cut -c5-6|tr [a-z] [A-Z])
+decimallocation=$(echo "obase=10; ibase=16; $location" | bc)
+decimallocation=$((decimallocation+101))
+#echo "pass4:"$pass4
+cp shake*.* /home/level3
+linetoinsert="Millionth $pass4"
+sed -i "$decimallocation s/.*/$linetoinsert/" shakespeare-macbeth-46.txt
+
+chown level3:level3 /home/level3/*.*
+
+
+# Set up Level 4
+#
+#
+#
+
+echo "pass5:"$pass5
+
+# Set up Level 5
+#
+#
+#
+
+#further dev notes
+# 1 - Need to change the READ Access on all files in the different "level" folders to not have global READ access
+# 2 - Extend the length of the password
