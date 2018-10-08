@@ -1,0 +1,6 @@
+useradd level0 --create-home --password "$(openssl passwd -1 "level0")" --shell /bin/bash --user-group
+useradd level1 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
+useradd level2 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
+useradd level3 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
+useradd level4 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
+useradd level5 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
