@@ -65,8 +65,8 @@ chown level2:level2 /home/level2/inhere
 # figure out which file number is going to be the one that we hide the password in.
 # strip the first digit off of the password and use that 
 
-location=$(echo md5 $pass3 |cut -c1)
-echo md5 $pass3
+location=$(echo md5sum $pass3 |cut -c1)
+echo md5sum $pass3
 decimallocation=$(echo "obase=10; ibase=16; $location" | bc)
 decimallocation=$((decimallocation+1))
 
