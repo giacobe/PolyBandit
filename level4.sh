@@ -52,7 +52,10 @@ do
   else
     ans=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
   fi
-  echo ${WORDS[$count]}" "$ans > /home/level4/README.txt
-  chown level4:level4 /home/level4/README.txt
+  echo ${WORDS[$count]}" "$ans > /home/level4/oneline.txt;
+  cat /home/level4/README.txt /home/level4/oneline.txt > /home/level4/README2.txt;
+  rm /home/level4/README.txt;
+  mv /home/level4/README2.txt /home/level4/README.txt;
   count=$((count+1));
 done
+chown level4:level4 /home/level4/README.txt

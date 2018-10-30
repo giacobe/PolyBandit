@@ -99,4 +99,4 @@ useradd level5 --create-home --password "$(openssl passwd -1 $level5_pass)" --sh
 ./level2.sh;
 ./level3.sh;
 ./level4.sh;
-#./level5.sh;
+./level5.sh;

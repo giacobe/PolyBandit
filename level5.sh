@@ -20,9 +20,8 @@ do
 
   rand_dir1=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
 
-  mkdir $rand_dir1;
+  mkdir /home/level5/$rand_dir1;
   count2=0;
-  cd $rand_dir1;
   while [ $count2 -lt 10 ];
   do
     char1=$[RANDOM%61];
@@ -36,9 +35,8 @@ do
 
     rand_dir2=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
 
-    mkdir $rand_dir2;
+    mkdir /home/level5/$rand_dir1/$rand_dir2;
     count3=0;
-    cd $rand_dir2;
     while [ $count3 -lt 10 ];
     do
 
@@ -59,8 +57,8 @@ do
 
         rand_file=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
 
-	touch $rand_file.txt > home/level5/$rand_dir1/$rand_dir2
-        chown level5:level5 home/level5/$rand_dir1/$rand_dir2/
+	echo "these are not the passwords you're looking for" > home/level5/$rand_dir1/$rand_dir2/$rand_file.txt
+        chown level5:level5 home/level5/$rand_dir1/$rand_dir2/$rand_file.txt
         count3=$(($count3+1));
       fi
     done
