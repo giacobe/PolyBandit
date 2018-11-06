@@ -17,7 +17,7 @@ do
   char7=$[RANDOM%61];
   char8=$[RANDOM%61];
 
-  rand_user=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
+  rand_user="level6_"${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
 
   useradd $rand_user --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
   text_count=0;
