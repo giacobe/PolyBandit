@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "The password for the next level is the only line that's different between the two inhere files in level10_account1 and level10_account2. The password will be in the level10_account1's side." > /home/level10/README.txt;
+
 useradd level10_account1 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
 
 useradd level10_account2 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group

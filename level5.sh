@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "The password for the next level is in a file called inhere.txt" > /home/level5/README.txt;
+
 password_spot1=$[RANDOM%10];
 password_spot2=$[RANDOM%10];
 password_spot3=$[RANDOM%10];

@@ -97,6 +97,7 @@ useradd level3 --create-home --password "$(openssl passwd -1 $level3_pass)" --sh
 useradd level4 --create-home --password "$(openssl passwd -1 $level4_pass)" --shell /bin/bash --user-group
 useradd level5 --create-home --password "$(openssl passwd -1 $level5_pass)" --shell /bin/bash --user-group
 useradd level6 --create-home --password "$(openssl passwd -1 $level6_pass)" --shell /bin/bash --user-group
+useradd level7 --create-home --password "$(openssl passwd -1 $level7_pass)" --shell /bin/bash --user-group
 useradd level8 --create-home --password "$(openssl passwd -1 $level8_pass)" --shell /bin/bash --user-group
 useradd level9 --create-home --password "$(openssl passwd -1 $level9_pass)" --shell /bin/bash --user-group
 useradd level10 --create-home --password "$(openssl passwd -1 $level10_pass)" --shell /bin/bash --user-group
@@ -105,9 +106,10 @@ useradd level10 --create-home --password "$(openssl passwd -1 $level10_pass)" --
 ./level1.sh;
 ./level2.sh;
 ./level3.sh;
-./level4.sh;
+./level4_easy.sh;
 ./level5.sh;
-./level6.sh
+./level6.sh;
+./level7.sh;
 ./level8.sh;
 ./level9.sh;
 ./level10.sh;

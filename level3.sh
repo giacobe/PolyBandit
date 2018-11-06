@@ -58,4 +58,4 @@ done
 chown level3:level3 /home/level3/README.txt;
 rm /home/level3/oneline.txt;
 
-echo "The password for the next level is next to the phrase"$hint > /home/level3/README.txt;
+echo "The password for the next level is next to the phrase "$hint > /home/level3/README.txt;

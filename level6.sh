@@ -37,6 +37,7 @@ do
       char8=$[RANDOM%61];
 
       rand_file=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
+      hint=$rand_file;
       echo $level6_pass > /home/$rand_user/$rand_file.txt;
       chown $rand_user:$rand_user /home/$rand_user/$rand_file.txt;
     else
@@ -70,3 +71,5 @@ do
   done
   user_count=$((user_count+1));
 done
+
+echo "The password for the next level is in a file called "$hint" but it is unknown which user it is in." > /home/level6/README.txt;
