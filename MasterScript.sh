@@ -87,6 +87,8 @@ echo $level3_pass;
 echo $level4_pass;
 echo $level5_pass;
 echo $level6_pass;
+echo $level7_pass;
+echo $level8_pass;
 echo $level9_pass;
 echo $level10_pass;
 
