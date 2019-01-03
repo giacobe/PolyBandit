@@ -56,6 +56,7 @@ do
   cat /home/level4/README.txt /home/level4/oneline.txt > /home/level4/README2.txt;
   rm /home/level4/README.txt;
   mv /home/level4/README2.txt /home/level4/README.txt;
+  rm /home/level4/oneline.txt;
   count=$((count+1));
 done
 chown level4:level4 /home/level4/README.txt
