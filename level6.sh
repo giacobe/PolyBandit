@@ -72,4 +72,4 @@ do
   user_count=$((user_count+1));
 done
 
-echo "The password for the next level is in a file called "$hint" but it is unknown which user it is in." > /home/level6/README.txt;
+echo "The password for the next level is in a file called "$hint" but it is not in the current user's directory.  You have to find it. It is unknown which user's directory it is in." > /home/level6/README.txt;
