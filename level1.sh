@@ -18,7 +18,7 @@ echo "*                                                                *" >> /ho
 echo "******************************************************************" >> /home/level1/README.txt;
 
 
-echo "cat ~/README.txt" >> /home/level1/.bashrc
+echo "cat /home/level1/README.txt" >> /home/level1/.bashrc
 
 echo $level2_pass > /home/level1/.inhere.txt;
 chown level1:level1 /home/level1/.inhere.txt;
