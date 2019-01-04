@@ -19,8 +19,6 @@ echo "*                                                                *" >> /ho
 echo "******************************************************************" >> /home/level4/README.txt;
 echo "cat /home/level4/README.txt" >> /home/level4/.bashrc
 
-echo "The pass for the next level is next to the word that would come last when sorted alphabetically" > /home/level4/README.txt;
-
 password_spot1=$[RANDOM%100];
 password_spot2=$password_spot1+1;
 password_spot3=$password_spot2+1;
