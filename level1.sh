@@ -6,9 +6,9 @@ echo "* Overthewire.org's Bandit exercise. The object is to figure out *" >> /ho
 echo "* what the password is for the next level, then log into that    *" >> /home/level1/README.txt;
 echo "* next level's account using SSH.                                *" >> /home/level1/README.txt;
 echo "*                                                                *" >> /home/level1/README.txt;
-echo "* You are at Level 0                                             *" >> /home/level1/README.txt;
+echo "* You are at Level 1                                             *" >> /home/level1/README.txt;
 echo "*                                                                *" >> /home/level1/README.txt;
-echo "* The password for the next level is in a hidden file            *" >> /home/level1/README.txt;
+echo "* The password for the next level is in a *hidden file*          *" >> /home/level1/README.txt;
 echo "* called inhere.txt                                              *" >> /home/level1/README.txt;
 echo "*                                                                *" >> /home/level1/README.txt;
 echo "******************************************************************" >> /home/level1/README.txt;
