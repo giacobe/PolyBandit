@@ -72,4 +72,25 @@ do
   user_count=$((user_count+1));
 done
 
-echo "The password for the next level is in a file called "$hint".txt but it is not in the current user's directory.  You have to find it. It is unknown which user's directory it is in." > /home/level6/README.txt;
+echo "******************************************************************" >> /home/level6/README.txt;
+echo "* Welcome to PolyBandit. This is a polymorphic clone of          *" >> /home/level6/README.txt;
+echo "* Overthewire.org's Bandit exercise. The object is to figure out *" >> /home/level6/README.txt;
+echo "* what the password is for the next level, then log into that    *" >> /home/level6/README.txt;
+echo "* next level's account using SSH.                                *" >> /home/level6/README.txt;
+echo "*                                                                *" >> /home/level6/README.txt;
+echo "* You are at Level 6                                             *" >> /home/level6/README.txt;
+echo "*                                                                *" >> /home/level6/README.txt;
+echo "* The password for the next level is in a file called "$hint".txt*" >> /home/level6/README.txt;
+echo "* but it is not in the current user's directory.  You have to    *" >> /home/level6/README.txt;
+echo "* find it. It is unknown which user's directory it is in.        *" >> /home/level6/README.txt;
+echo "*                                                                *" >> /home/level6/README.txt;
+echo "* Good luck finding it.                                          *" >> /home/level6/README.txt;
+echo "*                                                                *" >> /home/level6/README.txt;
+echo "* When you get the password for the next level, log in to the    *" >> /home/level6/README.txt;
+echo "* next level with the command:                                   *" >> /home/level6/README.txt;
+echo "*         ssh level7@localhost                                   *" >> /home/level6/README.txt;
+echo "*                                                                *" >> /home/level6/README.txt;
+echo "******************************************************************" >> /home/level6/README.txt;
+echo "cat /home/level6/README.txt" >> /home/level6/.bashrc
+
+
