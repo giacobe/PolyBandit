@@ -5,10 +5,15 @@ read name;
 
 date=$(date);
 
-level1_5=$name${date:0:10}"level1-5";
-level6_10=$name${date:0:10}"level6-10";
-level11_15=$name${date:0:10}"level11-15";
-level16_20=$name${date:0:10}"level16-20";
+#level1_5=$name${date:0:10}"level1-5";
+#level6_10=$name${date:0:10}"level6-10";
+#level11_15=$name${date:0:10}"level11-15";
+#level16_20=$name${date:0:10}"level16-20";
+
+level1_5=$name"level1-5";
+level6_10=$name"level6-10";
+level11_15=$name"level11-15";
+level16_20=$name"level16-20";
 
 MD51_5=$(echo -n $level1_5 | md5sum);
 MD56_10=$(echo -n $level6_10 | md5sum);
