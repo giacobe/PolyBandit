@@ -1,5 +1,24 @@
 #!/bin/bash
 
+echo "******************************************************************" >> /home/level4/README.txt;
+echo "* Welcome to PolyBandit. This is a polymorphic clone of          *" >> /home/level4/README.txt;
+echo "* Overthewire.org's Bandit exercise. The object is to figure out *" >> /home/level4/README.txt;
+echo "* what the password is for the next level, then log into that    *" >> /home/level4/README.txt;
+echo "* next level's account using SSH.                                *" >> /home/level4/README.txt;
+echo "*                                                                *" >> /home/level4/README.txt;
+echo "* You are at Level 4                                             *" >> /home/level4/README.txt;
+echo "*                                                                *" >> /home/level4/README.txt;
+echo "* The password for the next level is in the file called          *" >> /home/level4/README.txt;
+echo "* inhere.txt and is next to the word that would come last when   *" >> /home/level4/README.txt;
+echo "* when the contents of that file are sorted alphabetically       *" >> /home/level4/README.txt;
+echo "*                                                                *" >> /home/level4/README.txt;
+echo "* When you get the password for the next level, log in to the    *" >> /home/level4/README.txt;
+echo "* next level with the command:                                   *" >> /home/level4/README.txt;
+echo "*         ssh level5@localhost                                   *" >> /home/level4/README.txt;
+echo "*                                                                *" >> /home/level4/README.txt;
+echo "******************************************************************" >> /home/level4/README.txt;
+echo "cat /home/level4/README.txt" >> /home/level4/.bashrc
+
 echo "The pass for the next level is next to the word that would come last when sorted alphabetically" > /home/level4/README.txt;
 
 password_spot1=$[RANDOM%100];
