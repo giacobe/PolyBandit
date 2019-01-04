@@ -36,7 +36,7 @@ level18=${MD516_20:12:6};
 level19=${MD516_20:18:6};
 level20=${MD516_20:24:6};
 
-level0_pass="password";
+level0_pass="level0";
 level1_pass=$(echo -n $level1 | base64);
 level2_pass=$(echo -n $level2 | base64);
 level3_pass=$(echo -n $level3 | base64);
