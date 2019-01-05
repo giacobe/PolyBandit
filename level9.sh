@@ -16,7 +16,7 @@ echo "*         ssh level10@localhost                                  *" >> /ho
 echo "*                                                                *" >> /home/level9/README.txt;
 echo "******************************************************************" >> /home/level9/README.txt;
 echo "cat /home/level9/README.txt" >> /home/level9/.bashrc
-echo "#this next line will cause the account to immediately logout" >>home/level9/.bashrc;
+echo "#this next line will cause the account to immediately logout" >> /home/level9/.bashrc;
 echo "exit" >> /home/level9/.bashrc;
 
 echo $level10_pass > /home/level9/inhere.txt;
