@@ -20,4 +20,4 @@ echo "cat /home/level9/README.txt" >> /home/level9/.bashrc
 echo $level10_pass > /home/level9/inhere.txt;
 chown level9:level9 /home/level9/inhere.txt;
 
-chmod 333 /home/level9/inhere.txt;
+chmod 000 /home/level9/inhere.txt;
