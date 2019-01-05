@@ -23,4 +23,4 @@ echo "cat /home/level8/README.txt" >> /home/level8/.bashrc
 # this goes in Level 9's setup sudo echo "exit" >> /home/level9/.bashrc;
 
 echo $level9_pass > /home/level8/inhere.txt;
-chown level8_ans:level8 /home/level8/inhere.txt;
+chown level8:level8 /home/level8/inhere.txt;
