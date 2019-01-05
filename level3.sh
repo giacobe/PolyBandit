@@ -66,7 +66,7 @@ echo "* next level's account using SSH.                                *" >> /ho
 echo "*                                                                *" >> /home/level3/README.txt;
 echo "* You are at Level 3                                             *" >> /home/level3/README.txt;
 echo "*                                                                *" >> /home/level3/README.txt;
-echo "* The password for the next level is next to the phrase "$hint > /home/level3/README.txt;
+echo "* The password for the next level is next to the phrase "$hint" *" >> /home/level3/README.txt;
 echo "*                                                                *" >> /home/level3/README.txt;
 echo "* When you get the password for the next level, log in to the    *" >> /home/level3/README.txt;
 echo "* next level with the command:                                   *" >> /home/level3/README.txt;
