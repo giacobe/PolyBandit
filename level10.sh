@@ -6,8 +6,8 @@ useradd level10_account1 --create-home --password "$(openssl passwd -1 "password
 
 useradd level10_account2 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
 
-echo > home/account1/oneline.txt;
-echo > home/account2/oneline.txt;
+touch /home/account1/oneline.txt;
+touch /home/account2/oneline.txt;
 
 declare -a LETTERS=("a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z" "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" "1" "2" "3" "4" "5" "6" "7" "8" "9" "0");
 
