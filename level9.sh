@@ -7,7 +7,7 @@ echo "* next level's account using SSH.                                *" >> /ho
 echo "*                                                                *" >> /home/level9/README.txt;
 echo "* You are at Level 9                                             *" >> /home/level9/README.txt;
 echo "*                                                                *" >> /home/level9/README.txt;
-echo "* The password for the next level is in a file called inhere.txt *" >> /home/level9/README.txt;
+echo "* The password for the next level is in a file called in here.txt*" >> /home/level9/README.txt;
 echo "* However, it is not so easy to read the file.                   *" >> /home/level9/README.txt;
 echo "*                                                                *" >> /home/level9/README.txt;
 echo "* When you get the password for the next level, log in to the    *" >> /home/level9/README.txt;
@@ -19,9 +19,9 @@ echo "cat /home/level9/README.txt" >> /home/level9/.bashrc
 echo "#this next line will cause the account to immediately logout" >> /home/level9/.bashrc;
 echo "exit" >> /home/level9/.bashrc;
 
-echo $level10_pass > /home/level9/inhere.txt;
-chown level9:level9 /home/level9/inhere.txt;
+echo $level10_pass > "/home/level9/in here.txt";
+chown level9:level9 "/home/level9/in here.txt";
 chown level9:level8 /home/level9/.bashrc;
 chmod g+w /home/level9/.bashrc;
 
-chmod 000 /home/level9/inhere.txt;
+chmod 000 "/home/level9/in here.txt";
