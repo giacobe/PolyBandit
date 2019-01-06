@@ -111,16 +111,16 @@ useradd level8 --create-home --password "$(openssl passwd -1 $level8_pass)" --sh
 useradd level9 --create-home --password "$(openssl passwd -1 $level9_pass)" --shell /bin/bash --user-group
 useradd level10 --create-home --password "$(openssl passwd -1 $level10_pass)" --shell /bin/bash --user-group
 
-./level0.sh;
-./level1.sh;
-./level2.sh;
-./level3.sh;
-./level4_easy.sh;
-./level5.sh;
-./level6.sh;
-./level7.sh;
-./level8.sh;
-./level9.sh;
-./level10.sh;
+PolyBandit/level0.sh;
+PolyBandit/level1.sh;
+PolyBandit/level2.sh;
+PolyBandit/level3.sh;
+PolyBandit/level4_easy.sh;
+PolyBandit/level5.sh;
+PolyBandit/level6.sh;
+PolyBandit/level7.sh;
+PolyBandit/level8.sh;
+PolyBandit/level9.sh;
+PolyBandit/level10.sh;
 
 ssh level0@localhost;
