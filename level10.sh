@@ -31,7 +31,7 @@ do
 
   if (($count == $password_spot))
   then
-    echo $level10_pass >> /home/level10/inhere1.txt;
+    echo $level11_pass >> /home/level10/inhere1.txt;
     #cat /home/level10/inhere1.txt /home/level10/oneline.txt > /home/level10/inhere2.txt;
     #rm /home/level10/inhere1.txt;
     #mv /home/level10_account1/inhere2.txt /home/level10_account1/inhere.txt
