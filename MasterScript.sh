@@ -5,6 +5,8 @@ read name;
 
 date=$(date);
 
+echo "Setting up the levels of the game... please stand by...";
+
 #level1_5=$name${date:0:10}"level1-5";
 #level6_10=$name${date:0:10}"level6-10";
 #level11_15=$name${date:0:10}"level11-15";
