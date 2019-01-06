@@ -80,8 +80,8 @@ do
 
         rand_file=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
 
-	echo "these are not the passwords you're looking for" > home/level5/$rand_dir1/$rand_dir2/$rand_file.txt
-        chown level5:level5 home/level5/$rand_dir1/$rand_dir2/$rand_file.txt
+	echo "these are not the passwords you're looking for" > /home/level5/$rand_dir1/$rand_dir2/$rand_file.txt
+        chown level5:level5 /home/level5/$rand_dir1/$rand_dir2/$rand_file.txt
         count3=$(($count3+1));
       fi
     done
