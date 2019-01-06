@@ -12,10 +12,11 @@ echo "Setting up the levels of the game... please stand by...";
 #level11_15=$name${date:0:10}"level11-15";
 #level16_20=$name${date:0:10}"level16-20";
 
-level1_5=$name"level1-5";
-level6_10=$name"level6-10";
-level11_15=$name"level11-15";
-level16_20=$name"level16-20";
+#Passwords for IST 451 Spring 2019
+level1_5=$name"LbNvKYAx8z2UtzaCIY7g";
+level6_10=$name"iunyNCeTzDpW4UxOlt";
+level11_15=$name"tLbJNRZX0DuoFbS";
+level16_20=$name"joWrjVhadKLqweras";
 
 MD51_5=$(echo -n $level1_5 | md5sum);
 MD56_10=$(echo -n $level6_10 | md5sum);
@@ -87,18 +88,6 @@ export level18_pass;
 export level19_pass;
 export level20_pass;
 
-#echo $level0_pass;
-#echo $level1_pass;
-#echo $level2_pass;
-#echo $level3_pass;
-#echo $level4_pass;
-#echo $level5_pass;
-#echo $level6_pass;
-#echo $level7_pass;
-#echo $level8_pass;
-#echo $level9_pass;
-#echo $level10_pass;
-
 useradd level0 --create-home --password "$(openssl passwd -1 $level0_pass)" --shell /bin/bash --user-group
 useradd level1 --create-home --password "$(openssl passwd -1 $level1_pass)" --shell /bin/bash --user-group
 useradd level2 --create-home --password "$(openssl passwd -1 $level2_pass)" --shell /bin/bash --user-group
@@ -122,5 +111,7 @@ PolyBandit/level7.sh;
 PolyBandit/level8.sh;
 PolyBandit/level9.sh;
 PolyBandit/level10.sh;
+
+echo "Now starting the game. Please log in with the password 'level0'";
 
 ssh level0@localhost;
