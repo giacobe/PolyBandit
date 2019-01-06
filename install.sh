@@ -100,7 +100,7 @@ useradd level8 --create-home --password "$(openssl passwd -1 $level8_pass)" --sh
 useradd level9 --create-home --password "$(openssl passwd -1 $level9_pass)" --shell /bin/bash --user-group
 useradd level10 --create-home --password "$(openssl passwd -1 $level10_pass)" --shell /bin/bash --user-group
 
-cd ist451_spring2019
+cd PolyBandit
 ./level0.sh;
 ./level1.sh;
 ./level2.sh;
