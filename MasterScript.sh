@@ -85,17 +85,17 @@ export level18_pass;
 export level19_pass;
 export level20_pass;
 
-echo $level0_pass;
-echo $level1_pass;
-echo $level2_pass;
-echo $level3_pass;
-echo $level4_pass;
-echo $level5_pass;
-echo $level6_pass;
-echo $level7_pass;
-echo $level8_pass;
-echo $level9_pass;
-echo $level10_pass;
+#echo $level0_pass;
+#echo $level1_pass;
+#echo $level2_pass;
+#echo $level3_pass;
+#echo $level4_pass;
+#echo $level5_pass;
+#echo $level6_pass;
+#echo $level7_pass;
+#echo $level8_pass;
+#echo $level9_pass;
+#echo $level10_pass;
 
 useradd level0 --create-home --password "$(openssl passwd -1 $level0_pass)" --shell /bin/bash --user-group
 useradd level1 --create-home --password "$(openssl passwd -1 $level1_pass)" --shell /bin/bash --user-group
