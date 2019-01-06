@@ -1,5 +1,7 @@
 #!/bin/bash
 
+touch /home/level4/inhere.txt
+
 echo "******************************************************************" >> /home/level4/README.txt;
 echo "* Welcome to PolyBandit. This is a polymorphic clone of          *" >> /home/level4/README.txt;
 echo "* Overthewire.org's Bandit exercise. The object is to figure out *" >> /home/level4/README.txt;
