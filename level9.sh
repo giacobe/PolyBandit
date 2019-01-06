@@ -19,9 +19,9 @@ echo "cat /home/level9/README.txt" >> /home/level9/.bashrc
 echo "#this next line will cause the account to immediately logout" >> /home/level9/.bashrc;
 echo "exit" >> /home/level9/.bashrc;
 
-echo $level10_pass > /home/level9/inhere.txt;
-chown level9:level9 /home/level9/inhere.txt;
+echo $level10_pass > "/home/level9/in here.txt";
+chown level9:level9 "/home/level9/in here.txt";
 chown level9:level8 /home/level9/.bashrc;
 chmod g+w /home/level9/.bashrc;
 
-chmod 000 /home/level9/inhere.txt;
+chmod 000 "/home/level9/in here.txt";
