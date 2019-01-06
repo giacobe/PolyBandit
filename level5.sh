@@ -39,7 +39,6 @@ do
   char8=$[RANDOM%61];
 
   rand_dir1=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
-  echo "first level dir is "$rand_dir1;
   
   mkdir /home/level5/$rand_dir1;
   count2=0;
@@ -56,8 +55,6 @@ do
 
     rand_dir2=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
     
-    echo "second level dir is "$rand_dir2;
-
     mkdir /home/level5/$rand_dir1/$rand_dir2;
     count3=0;
     while [ $count3 -lt 10 ];
