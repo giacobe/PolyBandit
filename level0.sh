@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cp Instructions.txt /home/level0
-
 echo "******************************************************************" >> /home/level0/README.txt;
 echo "* Welcome to PolyBandit. This is a polymorphic clone of          *" >> /home/level0/README.txt;
 echo "* Overthewire.org's Bandit exercise. The object is to figure out *" >> /home/level0/README.txt;
