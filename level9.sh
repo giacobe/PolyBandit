@@ -7,7 +7,7 @@ echo "* next level's account using SSH.                                *" >> /ho
 echo "*                                                                *" >> /home/level9/README.txt;
 echo "* You are at Level 9                                             *" >> /home/level9/README.txt;
 echo "*                                                                *" >> /home/level9/README.txt;
-echo "* The password for the next level is in a file called inhere.txt *" >> /home/level9/README.txt;
+echo "* The password for the next level is in a file called in here.txt*" >> /home/level9/README.txt;
 echo "* However, it is not so easy to read the file.                   *" >> /home/level9/README.txt;
 echo "*                                                                *" >> /home/level9/README.txt;
 echo "* When you get the password for the next level, log in to the    *" >> /home/level9/README.txt;
