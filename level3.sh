@@ -56,7 +56,7 @@ do
     count=$(($count+1));
   fi
 done
-chown level3:level3 /home/level3/README.txt;
+
 rm /home/level3/oneline.txt;
 
 echo "******************************************************************" >> /home/level3/README.txt;
@@ -77,4 +77,4 @@ echo "******************************************************************" >> /ho
 
 echo "cat /home/level3/README.txt" >> /home/level3/.bashrc
 
-
+chown level3:level3 /home/level3/README.txt;
