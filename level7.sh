@@ -17,7 +17,7 @@ echo "*         ssh level8@localhost                                   *" >> /ho
 echo "*                                                                *" >> /home/level7/README.txt;
 echo "******************************************************************" >> /home/level7/README.txt;
 echo "cat /home/level7/README.txt" >> /home/level7/.bashrc
-f
+
 echo $level8_pass > /home/level7/inhere.txt;
 chown level7:level7 /home/level7/inhere.txt;
 
