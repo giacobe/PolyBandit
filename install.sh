@@ -13,10 +13,16 @@ echo "Setting up the levels of the game... please stand by...";
 #level16_20=$name${date:0:10}"level16-20";
 
 #Passwords for IST 451 Spring 2019
-level1_5=$name"LbNvKYAx8z2UtzaCIY7g";
-level6_10=$name"iunyNCeTzDpW4UxOlt";
-level11_15=$name"tLbJNRZX0DuoFbS";
-level16_20=$name"joWrjVhadKLqweras";
+#level1_5=$name"LbNvKYAx8z2UtzaCIY7g";
+#level6_10=$name"iunyNCeTzDpW4UxOlt";
+#level11_15=$name"tLbJNRZX0DuoFbS";
+#level16_20=$name"joWrjVhadKLqweras";
+
+#Passwords for Cyber 100 Spring 2021
+level1_5=$name"JbhQY4lLEw5YfUON";
+level6_10=$name"2RPyQNYOY1sGO4wAT";
+level11_15=$name"KFwdrBdRvWuWFsyA";
+level16_20=$name"syA3LFSYJsGvrNGDs";
 
 MD51_5=$(echo -n $level1_5 | md5sum);
 MD56_10=$(echo -n $level6_10 | md5sum);
