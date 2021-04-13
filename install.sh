@@ -96,30 +96,30 @@ export level20_pass;
 
 mkdir /home
 adduser level0  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level1  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level2  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level3  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level4  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level5  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level6  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level7  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level8  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level9  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level10  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level1  -h /home/level1 -s /bin/bash --gecos "" -D
+adduser level2  -h /home/level2 -s /bin/bash --gecos "" -D
+adduser level3  -h /home/level3 -s /bin/bash --gecos "" -D
+adduser level4  -h /home/level4 -s /bin/bash --gecos "" -D
+adduser level5  -h /home/level5 -s /bin/bash --gecos "" -D
+adduser level6  -h /home/level6 -s /bin/bash --gecos "" -D
+adduser level7  -h /home/level7 -s /bin/bash --gecos "" -D
+adduser level8  -h /home/level8 -s /bin/bash --gecos "" -D
+adduser level9  -h /home/level9 -s /bin/bash --gecos "" -D
+adduser level10  -h /home/level10 -s /bin/bash --gecos "" -D
 
 # TODO: set passwords
 # TODO: test?
-echo -e "level0_pass\n$level0_pass\n" | passwd level0
-echo -e "level1_pass\n$level1_pass\n" | passwd level1
-echo -e "level2_pass\n$level2_pass\n" | passwd level2
-echo -e "level3_pass\n$level3_pass\n" | passwd level3
-echo -e "level4_pass\n$level4_pass\n" | passwd level4
-echo -e "level5_pass\n$level5_pass\n" | passwd level5
-echo -e "level6_pass\n$level6_pass\n" | passwd level6
-echo -e "level7_pass\n$level7_pass\n" | passwd level7
-echo -e "level8_pass\n$level8_pass\n" | passwd level8
-echo -e "level9_pass\n$level9_pass\n" | passwd level9
-echo -e "level10_pass\n$level10_pass\n" | passwd level10
+echo -e "$level0_pass\n$level0_pass\n" | passwd level0
+echo -e "$level1_pass\n$level1_pass\n" | passwd level1
+echo -e "$level2_pass\n$level2_pass\n" | passwd level2
+echo -e "$level3_pass\n$level3_pass\n" | passwd level3
+echo -e "$level4_pass\n$level4_pass\n" | passwd level4
+echo -e "$level5_pass\n$level5_pass\n" | passwd level5
+echo -e "$level6_pass\n$level6_pass\n" | passwd level6
+echo -e "$level7_pass\n$level7_pass\n" | passwd level7
+echo -e "$level8_pass\n$level8_pass\n" | passwd level8
+echo -e "$level9_pass\n$level9_pass\n" | passwd level9
+echo -e "$level10_pass\n$level10_pass\n" | passwd level10
 
 #useradd level0 --create-home --password "$(openssl passwd -1 $level0_pass)" --shell /bin/bash --user-group
 #useradd level1 --create-home --password "$(openssl passwd -1 $level1_pass)" --shell /bin/bash --user-group
