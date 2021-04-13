@@ -94,17 +94,32 @@ export level18_pass;
 export level19_pass;
 export level20_pass;
 
-useradd level0 --create-home --password "$(openssl passwd -1 $level0_pass)" --shell /bin/bash --user-group
-useradd level1 --create-home --password "$(openssl passwd -1 $level1_pass)" --shell /bin/bash --user-group
-useradd level2 --create-home --password "$(openssl passwd -1 $level2_pass)" --shell /bin/bash --user-group
-useradd level3 --create-home --password "$(openssl passwd -1 $level3_pass)" --shell /bin/bash --user-group
-useradd level4 --create-home --password "$(openssl passwd -1 $level4_pass)" --shell /bin/bash --user-group
-useradd level5 --create-home --password "$(openssl passwd -1 $level5_pass)" --shell /bin/bash --user-group
-useradd level6 --create-home --password "$(openssl passwd -1 $level6_pass)" --shell /bin/bash --user-group
-useradd level7 --create-home --password "$(openssl passwd -1 $level7_pass)" --shell /bin/bash --user-group
-useradd level8 --create-home --password "$(openssl passwd -1 $level8_pass)" --shell /bin/bash --user-group
-useradd level9 --create-home --password "$(openssl passwd -1 $level9_pass)" --shell /bin/bash --user-group
-useradd level10 --create-home --password "$(openssl passwd -1 $level10_pass)" --shell /bin/bash --user-group
+mkdir /home
+adduser level0  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level1  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level2  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level3  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level4  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level5  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level6  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level7  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level8  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level9  -h /home/level0 -s /bin/bash --gecos "" -D
+adduser level10  -h /home/level0 -s /bin/bash --gecos "" -D
+
+# TODO: set passwords
+
+#useradd level0 --create-home --password "$(openssl passwd -1 $level0_pass)" --shell /bin/bash --user-group
+#useradd level1 --create-home --password "$(openssl passwd -1 $level1_pass)" --shell /bin/bash --user-group
+#useradd level2 --create-home --password "$(openssl passwd -1 $level2_pass)" --shell /bin/bash --user-group
+#useradd level3 --create-home --password "$(openssl passwd -1 $level3_pass)" --shell /bin/bash --user-group
+#useradd level4 --create-home --password "$(openssl passwd -1 $level4_pass)" --shell /bin/bash --user-group
+#useradd level5 --create-home --password "$(openssl passwd -1 $level5_pass)" --shell /bin/bash --user-group
+#useradd level6 --create-home --password "$(openssl passwd -1 $level6_pass)" --shell /bin/bash --user-group
+#useradd level7 --create-home --password "$(openssl passwd -1 $level7_pass)" --shell /bin/bash --user-group
+#useradd level8 --create-home --password "$(openssl passwd -1 $level8_pass)" --shell /bin/bash --user-group
+#useradd level9 --create-home --password "$(openssl passwd -1 $level9_pass)" --shell /bin/bash --user-group
+#useradd level10 --create-home --password "$(openssl passwd -1 $level10_pass)" --shell /bin/bash --user-group
 
 cd PolyBandit
 ./level0.sh;
