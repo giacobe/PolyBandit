@@ -122,17 +122,17 @@ echo -e "$level9_pass\n$level9_pass\n" | passwd level9
 echo -e "$level10_pass\n$level10_pass\n" | passwd level10
 
 # add files for levels
-./level0.sh;
-./level1.sh;
-./level2.sh;
-./level3.sh;
-./level4_easy.sh;
-./level5.sh;
-./level6.sh;
-./level7.sh;
-./level8.sh;
-./level9.sh;
-./level10.sh;
+bash PolyBandit/level0.sh;
+bash PolyBandit/level1.sh;
+bash PolyBandit/level2.sh;
+bash PolyBandit/level3.sh;
+bash PolyBandit/level4_easy.sh;
+bash PolyBandit/level5.sh;
+bash PolyBandit/level6.sh;
+bash PolyBandit/level7.sh;
+bash PolyBandit/level8.sh;
+bash PolyBandit/level9.sh;
+bash PolyBandit/level10.sh;
 
 echo "Now starting the game. Please log in with the password 'level0'";
 
