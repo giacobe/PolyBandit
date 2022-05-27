@@ -94,21 +94,21 @@ export level18_pass;
 export level19_pass;
 export level20_pass;
 
-mkdir /home
-adduser level0  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level1  -h /home/level1 -s /bin/bash --gecos "" -D
-adduser level2  -h /home/level2 -s /bin/bash --gecos "" -D
-adduser level3  -h /home/level3 -s /bin/bash --gecos "" -D
-adduser level4  -h /home/level4 -s /bin/bash --gecos "" -D
-adduser level5  -h /home/level5 -s /bin/bash --gecos "" -D
-adduser level6  -h /home/level6 -s /bin/bash --gecos "" -D
-adduser level7  -h /home/level7 -s /bin/bash --gecos "" -D
-adduser level8  -h /home/level8 -s /bin/bash --gecos "" -D
-adduser level9  -h /home/level9 -s /bin/bash --gecos "" -D
-adduser level10  -h /home/level10 -s /bin/bash --gecos "" -D
 
-# TODO: set passwords
-# TODO: test?
+# creates new users for levels
+adduser level0 --home /home/level0 --disabled-password --shell /bin/bash --gecos ""
+adduser level1 --home /home/level1 --disabled-password --shell /bin/bash --gecos ""
+adduser level2 --home /home/level2 --disabled-password --shell /bin/bash --gecos ""
+adduser level3 --home /home/level3 --disabled-password --shell /bin/bash --gecos ""
+adduser level4 --home /home/level4 --disabled-password --shell /bin/bash --gecos ""
+adduser level5 --home /home/level5 --disabled-password --shell /bin/bash --gecos ""
+adduser level6 --home /home/level6 --disabled-password --shell /bin/bash --gecos ""
+adduser level7 --home /home/level7 --disabled-password --shell /bin/bash --gecos ""
+adduser level8 --home /home/level8 --disabled-password --shell /bin/bash --gecos ""
+adduser level9 --home /home/level9 --disabled-password --shell /bin/bash --gecos ""
+adduser level10 --home /home/level10 --disabled-password --shell /bin/bash --gecos ""
+
+# sets passwords for levels
 echo -e "$level0_pass\n$level0_pass\n" | passwd level0
 echo -e "$level1_pass\n$level1_pass\n" | passwd level1
 echo -e "$level2_pass\n$level2_pass\n" | passwd level2
@@ -121,30 +121,18 @@ echo -e "$level8_pass\n$level8_pass\n" | passwd level8
 echo -e "$level9_pass\n$level9_pass\n" | passwd level9
 echo -e "$level10_pass\n$level10_pass\n" | passwd level10
 
-#useradd level0 --create-home --password "$(openssl passwd -1 $level0_pass)" --shell /bin/bash --user-group
-#useradd level1 --create-home --password "$(openssl passwd -1 $level1_pass)" --shell /bin/bash --user-group
-#useradd level2 --create-home --password "$(openssl passwd -1 $level2_pass)" --shell /bin/bash --user-group
-#useradd level3 --create-home --password "$(openssl passwd -1 $level3_pass)" --shell /bin/bash --user-group
-#useradd level4 --create-home --password "$(openssl passwd -1 $level4_pass)" --shell /bin/bash --user-group
-#useradd level5 --create-home --password "$(openssl passwd -1 $level5_pass)" --shell /bin/bash --user-group
-#useradd level6 --create-home --password "$(openssl passwd -1 $level6_pass)" --shell /bin/bash --user-group
-#useradd level7 --create-home --password "$(openssl passwd -1 $level7_pass)" --shell /bin/bash --user-group
-#useradd level8 --create-home --password "$(openssl passwd -1 $level8_pass)" --shell /bin/bash --user-group
-#useradd level9 --create-home --password "$(openssl passwd -1 $level9_pass)" --shell /bin/bash --user-group
-#useradd level10 --create-home --password "$(openssl passwd -1 $level10_pass)" --shell /bin/bash --user-group
-
-cd PolyBandit
-./level0.sh;
-./level1.sh;
-./level2.sh;
-./level3.sh;
-./level4_easy.sh;
-./level5.sh;
-./level6.sh;
-./level7.sh;
-./level8.sh;
-./level9.sh;
-./level10.sh;
+# add files for levels
+bash PolyBandit/level0.sh;
+bash PolyBandit/level1.sh;
+bash PolyBandit/level2.sh;
+bash PolyBandit/level3.sh;
+bash PolyBandit/level4_easy.sh;
+bash PolyBandit/level5.sh;
+bash PolyBandit/level6.sh;
+bash PolyBandit/level7.sh;
+bash PolyBandit/level8.sh;
+bash PolyBandit/level9.sh;
+bash PolyBandit/level10.sh;
 
 echo "Now starting the game. Please log in with the password 'level0'";
 
