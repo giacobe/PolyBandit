@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Please enter your PSU ID (abc1234):";
 read name;
@@ -7,22 +7,11 @@ date=$(date);
 
 echo "Setting up the levels of the game... please stand by...";
 
-#level1_5=$name${date:0:10}"level1-5";
-#level6_10=$name${date:0:10}"level6-10";
-#level11_15=$name${date:0:10}"level11-15";
-#level16_20=$name${date:0:10}"level16-20";
-
-#Passwords for IST 451 Spring 2019
-#level1_5=$name"LbNvKYAx8z2UtzaCIY7g";
-#level6_10=$name"iunyNCeTzDpW4UxOlt";
-#level11_15=$name"tLbJNRZX0DuoFbS";
-#level16_20=$name"joWrjVhadKLqweras";
-
-#Passwords for Cyber 100 Spring 2021
-level1_5=$name"JbhQY4lLEw5YfUON";
-level6_10=$name"2RPyQNYOY1sGO4wAT";
-level11_15=$name"KFwdrBdRvWuWFsyA";
-level16_20=$name"syA3LFSYJsGvrNGDs";
+#Password
+level1_5=$name"password1";
+level6_10=$name"password2";
+level11_15=$name"password3";
+level16_20=$name"password4";
 
 MD51_5=$(echo -n $level1_5 | md5sum);
 MD56_10=$(echo -n $level6_10 | md5sum);
@@ -94,21 +83,29 @@ export level18_pass;
 export level19_pass;
 export level20_pass;
 
-mkdir /home
-adduser level0  -h /home/level0 -s /bin/bash --gecos "" -D
-adduser level1  -h /home/level1 -s /bin/bash --gecos "" -D
-adduser level2  -h /home/level2 -s /bin/bash --gecos "" -D
-adduser level3  -h /home/level3 -s /bin/bash --gecos "" -D
-adduser level4  -h /home/level4 -s /bin/bash --gecos "" -D
-adduser level5  -h /home/level5 -s /bin/bash --gecos "" -D
-adduser level6  -h /home/level6 -s /bin/bash --gecos "" -D
-adduser level7  -h /home/level7 -s /bin/bash --gecos "" -D
-adduser level8  -h /home/level8 -s /bin/bash --gecos "" -D
-adduser level9  -h /home/level9 -s /bin/bash --gecos "" -D
-adduser level10  -h /home/level10 -s /bin/bash --gecos "" -D
+# Set up /home directory for buildroot (which has no /home directory ?!)
+echo making home directory
 
-# TODO: set passwords
-# TODO: test?
+mkdir /home
+
+#Make home directories for each user/level
+echo making user accounts
+
+adduser level0  -h /home/level0 -s /bin/sh --gecos "" -D
+adduser level1  -h /home/level1 -s /bin/sh --gecos "" -D
+adduser level2  -h /home/level2 -s /bin/sh --gecos "" -D
+adduser level3  -h /home/level3 -s /bin/sh --gecos "" -D
+adduser level4  -h /home/level4 -s /bin/sh --gecos "" -D
+adduser level5  -h /home/level5 -s /bin/sh --gecos "" -D
+adduser level6  -h /home/level6 -s /bin/sh --gecos "" -D
+adduser level7  -h /home/level7 -s /bin/sh --gecos "" -D
+adduser level8  -h /home/level8 -s /bin/sh --gecos "" -D
+adduser level9  -h /home/level9 -s /bin/sh --gecos "" -D
+adduser level10  -h /home/level10 -s /bin/sh --gecos "" -D
+
+#set passwords
+echo setting level passwords
+
 echo -e "$level0_pass\n$level0_pass\n" | passwd level0
 echo -e "$level1_pass\n$level1_pass\n" | passwd level1
 echo -e "$level2_pass\n$level2_pass\n" | passwd level2
@@ -121,19 +118,7 @@ echo -e "$level8_pass\n$level8_pass\n" | passwd level8
 echo -e "$level9_pass\n$level9_pass\n" | passwd level9
 echo -e "$level10_pass\n$level10_pass\n" | passwd level10
 
-#useradd level0 --create-home --password "$(openssl passwd -1 $level0_pass)" --shell /bin/bash --user-group
-#useradd level1 --create-home --password "$(openssl passwd -1 $level1_pass)" --shell /bin/bash --user-group
-#useradd level2 --create-home --password "$(openssl passwd -1 $level2_pass)" --shell /bin/bash --user-group
-#useradd level3 --create-home --password "$(openssl passwd -1 $level3_pass)" --shell /bin/bash --user-group
-#useradd level4 --create-home --password "$(openssl passwd -1 $level4_pass)" --shell /bin/bash --user-group
-#useradd level5 --create-home --password "$(openssl passwd -1 $level5_pass)" --shell /bin/bash --user-group
-#useradd level6 --create-home --password "$(openssl passwd -1 $level6_pass)" --shell /bin/bash --user-group
-#useradd level7 --create-home --password "$(openssl passwd -1 $level7_pass)" --shell /bin/bash --user-group
-#useradd level8 --create-home --password "$(openssl passwd -1 $level8_pass)" --shell /bin/bash --user-group
-#useradd level9 --create-home --password "$(openssl passwd -1 $level9_pass)" --shell /bin/bash --user-group
-#useradd level10 --create-home --password "$(openssl passwd -1 $level10_pass)" --shell /bin/bash --user-group
-
-cd PolyBandit
+cd /home
 ./level0.sh;
 ./level1.sh;
 ./level2.sh;
@@ -147,5 +132,4 @@ cd PolyBandit
 ./level10.sh;
 
 echo "Now starting the game. Please log in with the password 'level0'";
-
-ssh level0@localhost;
+su level0
