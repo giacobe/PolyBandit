@@ -1,24 +1,13 @@
 #!/bin/bash
 
-echo "Please enter your PSU ID (abc1234):";
+echo "Please enter your email address (xyz1234@psu.edu):";
 read name;
 
 date=$(date);
 
 echo "Setting up the levels of the game... please stand by...";
 
-#level1_5=$name${date:0:10}"level1-5";
-#level6_10=$name${date:0:10}"level6-10";
-#level11_15=$name${date:0:10}"level11-15";
-#level16_20=$name${date:0:10}"level16-20";
-
-#Passwords for IST 451 Spring 2019
-#level1_5=$name"LbNvKYAx8z2UtzaCIY7g";
-#level6_10=$name"iunyNCeTzDpW4UxOlt";
-#level11_15=$name"tLbJNRZX0DuoFbS";
-#level16_20=$name"joWrjVhadKLqweras";
-
-#Passwords for Cyber 100 Spring 2021
+#Passwords
 level1_5=$name"JbhQY4lLEw5YfUON";
 level6_10=$name"2RPyQNYOY1sGO4wAT";
 level11_15=$name"KFwdrBdRvWuWFsyA";
@@ -96,17 +85,17 @@ export level20_pass;
 
 
 # creates new users for levels
-adduser level0 --home /home/level0 --disabled-password --shell /bin/bash --gecos ""
-adduser level1 --home /home/level1 --disabled-password --shell /bin/bash --gecos ""
-adduser level2 --home /home/level2 --disabled-password --shell /bin/bash --gecos ""
-adduser level3 --home /home/level3 --disabled-password --shell /bin/bash --gecos ""
-adduser level4 --home /home/level4 --disabled-password --shell /bin/bash --gecos ""
-adduser level5 --home /home/level5 --disabled-password --shell /bin/bash --gecos ""
-adduser level6 --home /home/level6 --disabled-password --shell /bin/bash --gecos ""
-adduser level7 --home /home/level7 --disabled-password --shell /bin/bash --gecos ""
-adduser level8 --home /home/level8 --disabled-password --shell /bin/bash --gecos ""
-adduser level9 --home /home/level9 --disabled-password --shell /bin/bash --gecos ""
-adduser level10 --home /home/level10 --disabled-password --shell /bin/bash --gecos ""
+adduser level0 -m
+adduser level1 -m
+adduser level2 -m
+adduser level3 -m
+adduser level4 -m
+adduser level5 -m
+adduser level6 -m
+adduser level7 -m
+adduser level8 -m
+adduser level9 -m
+adduser level10 -m
 
 # sets passwords for levels
 echo -e "$level0_pass\n$level0_pass\n" | passwd level0
@@ -122,18 +111,17 @@ echo -e "$level9_pass\n$level9_pass\n" | passwd level9
 echo -e "$level10_pass\n$level10_pass\n" | passwd level10
 
 # add files for levels
-bash PolyBandit/level0.sh;
-bash PolyBandit/level1.sh;
-bash PolyBandit/level2.sh;
-bash PolyBandit/level3.sh;
-bash PolyBandit/level4_easy.sh;
-bash PolyBandit/level5.sh;
-bash PolyBandit/level6.sh;
-bash PolyBandit/level7.sh;
-bash PolyBandit/level8.sh;
-bash PolyBandit/level9.sh;
-bash PolyBandit/level10.sh;
+bash level0.sh;
+bash level1.sh;
+bash level2.sh;
+bash level3.sh;
+bash level4_easy.sh;
+bash level5.sh;
+bash level6.sh;
+bash level7.sh;
+bash level8.sh;
+bash level9.sh;
+bash level10.sh;
 
 echo "Now starting the game. Please log in with the password 'level0'";
-
-ssh level0@localhost;
+su - level0
