@@ -85,17 +85,17 @@ export level20_pass;
 
 
 # creates new users for levels
-adduser level0 -m
-adduser level1 -m
-adduser level2 -m
-adduser level3 -m
-adduser level4 -m
-adduser level5 -m
-adduser level6 -m
-adduser level7 -m
-adduser level8 -m
-adduser level9 -m
-adduser level10 -m
+useradd level0 -m
+useradd level1 -m
+useradd level2 -m
+useradd level3 -m
+useradd level4 -m
+useradd level5 -m
+useradd level6 -m
+useradd level7 -m
+useradd level8 -m
+useradd level9 -m
+useradd level10 -m
 
 # sets passwords for levels
 echo -e "$level0_pass\n$level0_pass\n" | passwd level0
