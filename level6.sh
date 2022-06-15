@@ -20,6 +20,8 @@ do
   rand_user="level6_"${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
 
   useradd $rand_user --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
+  chown $rand_user:level6 /home/$rand_user;
+  chmod g+rwx /home/$rand_user;
   text_count=0;
   while [ $text_count -lt 10 ];
   do
@@ -40,8 +42,7 @@ do
       hint=$rand_file;
       echo $level7_pass > /home/$rand_user/$rand_file.txt;
       chown $rand_user:level6 /home/$rand_user/$rand_file.txt;
-      chown $rand_user:level6 /home/$rand_user;
-      chmod g+rwx /home/$rand_user;
+
     else
 
       char1=$[RANDOM%36];
