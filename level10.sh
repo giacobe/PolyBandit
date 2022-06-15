@@ -5,7 +5,7 @@ echo "******************************************************************" >> /ho
 echo "* Welcome to PolyBandit. This is a polymorphic clone of          *" >> /home/level10/README.txt;
 echo "* Overthewire.org's Bandit exercise. The object is to figure out *" >> /home/level10/README.txt;
 echo "* what the password is for the next level, then log into that    *" >> /home/level10/README.txt;
-echo "* next level's account using SSH.                                *" >> /home/level10/README.txt;
+echo "* next level's account using su.                                 *" >> /home/level10/README.txt;
 echo "*                                                                *" >> /home/level10/README.txt;
 echo "* You are at Level 10. This is the last level.                   *" >> /home/level10/README.txt;
 echo "*                                                                *" >> /home/level10/README.txt;
@@ -15,9 +15,6 @@ echo "*                                                                *" >> /ho
 echo "******************************************************************" >> /home/level10/README.txt;
 
 echo "cat /home/level10/README.txt" >> /home/level10/.bashrc
-
-#useradd level10_account1 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
-#useradd level10_account2 --create-home --password "$(openssl passwd -1 "password")" --shell /bin/bash --user-group
 
 touch /home/level10/inhere1.txt;
 touch /home/level10/inhere2.txt;
