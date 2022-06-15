@@ -3,7 +3,7 @@ echo "******************************************************************" >> /ho
 echo "* Welcome to PolyBandit. This is a polymorphic clone of          *" >> /home/level9/README.txt;
 echo "* Overthewire.org's Bandit exercise. The object is to figure out *" >> /home/level9/README.txt;
 echo "* what the password is for the next level, then log into that    *" >> /home/level9/README.txt;
-echo "* next level's account using SSH.                                *" >> /home/level9/README.txt;
+echo "* next level's account using su.                                 *" >> /home/level9/README.txt;
 echo "*                                                                *" >> /home/level9/README.txt;
 echo "* You are at Level 9                                             *" >> /home/level9/README.txt;
 echo "*                                                                *" >> /home/level9/README.txt;
@@ -12,7 +12,7 @@ echo "* However, it is not so easy to read the file.                   *" >> /ho
 echo "*                                                                *" >> /home/level9/README.txt;
 echo "* When you get the password for the next level, log in to the    *" >> /home/level9/README.txt;
 echo "* next level with the command:                                   *" >> /home/level9/README.txt;
-echo "*         ssh level10@localhost                                  *" >> /home/level9/README.txt;
+echo "*         su - level10                                           *" >> /home/level9/README.txt;
 echo "*                                                                *" >> /home/level9/README.txt;
 echo "******************************************************************" >> /home/level9/README.txt;
 echo "cat /home/level9/README.txt" >> /home/level9/.bashrc
