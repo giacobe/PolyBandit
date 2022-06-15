@@ -39,7 +39,9 @@ do
       rand_file=${LETTERS[$char1]}${LETTERS[$char2]}${LETTERS[$char3]}${LETTERS[$char4]}${LETTERS[$char5]}${LETTERS[$char6]}${LETTERS[$char7]}${LETTERS[$char8]};
       hint=$rand_file;
       echo $level7_pass > /home/$rand_user/$rand_file.txt;
-      chown $rand_user:$rand_user /home/$rand_user/$rand_file.txt;
+      chown $rand_user:level6 /home/$rand_user/$rand_file.txt;
+      chown $rand_user:level6 /home/$rand_user;
+      chmod g+rwx /home/$rand_user;
     else
 
       char1=$[RANDOM%36];
