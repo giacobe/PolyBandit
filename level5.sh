@@ -4,18 +4,18 @@ echo "******************************************************************" >> /ho
 echo "* Welcome to PolyBandit. This is a polymorphic clone of          *" >> /home/level5/README.txt;
 echo "* Overthewire.org's Bandit exercise. The object is to figure out *" >> /home/level5/README.txt;
 echo "* what the password is for the next level, then log into that    *" >> /home/level5/README.txt;
-echo "* next level's account using SSH.                                *" >> /home/level5/README.txt;
+echo "* next level's account using su.                                 *" >> /home/level5/README.txt;
 echo "*                                                                *" >> /home/level5/README.txt;
 echo "* You are at Level 5                                             *" >> /home/level5/README.txt;
 echo "*                                                                *" >> /home/level5/README.txt;
 echo "* The password for the next level is in the file called          *" >> /home/level5/README.txt;
 echo "* inhere.txt                                                     *" >> /home/level5/README.txt;
 echo "*                                                                *" >> /home/level5/README.txt;
-echo "* Good luck finding it.                                          *" >> /home/level5/README.txt;
+echo "* Good luck 'finding' it.                                        *" >> /home/level5/README.txt;
 echo "*                                                                *" >> /home/level5/README.txt;
 echo "* When you get the password for the next level, log in to the    *" >> /home/level5/README.txt;
 echo "* next level with the command:                                   *" >> /home/level5/README.txt;
-echo "*         ssh level6@localhost                                   *" >> /home/level5/README.txt;
+echo "*         su - level6                                            *" >> /home/level5/README.txt;
 echo "*                                                                *" >> /home/level5/README.txt;
 echo "******************************************************************" >> /home/level5/README.txt;
 echo "cat /home/level5/README.txt" >> /home/level5/.bashrc
